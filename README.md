@@ -11,4 +11,5 @@
 - Pada commit ini, saya belajar bagaimana server memberi response berdasarkan pada request header yang diterimanya. Server akan melakukan pnegecekan pada request line (GET /HTTP/1.1). Jika request sesuai, server akan memberikan status 200 dan menampilkan halaman yang valid, yaitu hello.html. Jika tidak sesuai, server memberikan status 404 NOT FOUND dan menampilkan halaman yang tidak valid, yaitu 404.html.
 - Refactoring perlu dilakukan karena sebelumnya terdapat redudansi kode di bagian if-else yang melanggar konsep DRY. Jika nantinya kita ingin menambah endpoint baru, kita perlu menduplikasi kode yang sama secara terus-menerus.
 ## Commit 4:
+- Commit 4 ini menunjukkan pada saya bagaiamana bagaimana server single-threaded berjalan. Saat mengakses 2 window, dengan /sleep terlebih dahulu, window kedua akan load sampai window pertama selesai selama 10 detik. Hal ini akan menimbulkan masalah saat banyak orang yang mengakses /sleep karena semuanya saling menunggu satu sama lain. Oleh karenanya, kita perlu menerapkan multithread supaya tiap request berjalan dengan concurrent dan tidak akan memperlambat user ketika mengakses /sleep secara bersamaan.
 ## Commit 5:
